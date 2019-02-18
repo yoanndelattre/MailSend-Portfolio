@@ -25,7 +25,7 @@ app.post('/api/form', (req, res) => {
                 user: 'nxev5735p4tdrtqe@ethereal.email',
                 pass: 'cvMbA4H1T5JgG7nzAe'
             }
-        })
+        });
 
         let mailOptions = {
             from: 'notify@portfolio.com>',
@@ -33,7 +33,7 @@ app.post('/api/form', (req, res) => {
             subject: "New message from Portfolio Website",
             text: req.body.message,
             html: htmlEmail
-        }
+        };
 
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
@@ -41,7 +41,9 @@ app.post('/api/form', (req, res) => {
             }
 
             console.log('Message sent: %s', info.message)
+            console.log('Message URL: %s', nodemailer.getTestMessageUrl(info))
         })
+
     })
 })
 
