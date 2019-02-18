@@ -29,7 +29,7 @@ app.post('/api/form', (req, res) => {
 
         let mailOptions = {
             from: 'notify@perso-portfolio.com',
-            to: 'Yoann Delattre <contact@yoanndelattre.com>',
+            to: "Yoann Delattre <yoanndelattre21@gmail.com>",
             subject: "New message from Portfolio Website",
             text: req.body.message,
             html: htmlEmail
