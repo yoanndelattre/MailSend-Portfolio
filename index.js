@@ -35,15 +35,13 @@ app.post('/api/form', (req, res) => {
             html: htmlEmail
         }
 
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                return console.log(error);
+        transporter.sendMail(mailOptions, function(err, res) {
+            if (err) {
+              console.error('there was an error: ', err);
+            } else {
+              console.log('here is the res: ', res)
             }
-            console.log('Message sent: %s', info.messageId);   
-            console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-      
-            res.render('contact', {msg:'Email has been sent'});
-        });
+        })
 
     })
 })
