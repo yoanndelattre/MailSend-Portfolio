@@ -22,8 +22,8 @@ app.post('/api/form', (req, res) => {
             host: 'smtp.ethereal.email',
             port: 587,
             auth: {
-                user: 'nxev5735p4tdrtqe@ethereal.email',
-                pass: 'cvMbA4H1T5JgG7nzAe'
+                user: 'dy2jwez7ixlp25n7@ethereal.email',
+                pass: 'bD762pshqCAZvDEHvd'
             }
         })
 
