@@ -14,6 +14,7 @@ app.post('/api/form', (req, res) => {
                 <li>Name: ${req.body.name}</li>
                 <li>Email: ${req.body.email}</li>
             </ul>
+            <br></br>
             <h3>Message</h3>
             <p>${req.body.message}</p>
         `
@@ -39,8 +40,7 @@ app.post('/api/form', (req, res) => {
                 return console.log(err)
             }
 
-            console.log('Message sent: %s', info.message)
-            console.log('Message URL: %s', nodemailer.getTestMessageUrl(info))
+            console.log('Success')
         })
     })
 })
