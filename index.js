@@ -19,17 +19,16 @@ app.post('/api/form', (req, res) => {
         `
 
         let transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
+            service: 'gmail',
             auth: {
-                user: 'dy2jwez7ixlp25n7@ethereal.email',
-                pass: 'bD762pshqCAZvDEHvd'
+                user: 'portfolio.yoanndelattre@gmail.com',
+                pass: 'f3Nk50n8f8qF'
             }
         })
 
         let mailOptions = {
             from: 'notify@portfolio.com',
-            to: 'yoanndelattre21@gmail.com', 
+            to: 'contact@yoanndelattre.com', 
             subject: "New message from Portfolio Website",
             text: req.body.message,
             html: htmlEmail
