@@ -28,21 +28,22 @@ app.post('/api/form', (req, res) => {
         })
 
         let mailOptions = {
-            from: '"Portfolio Contact" <notify@portfolio.com>',
+            from: 'notify@portfolio.com>',
             to: 'yoanndelattre21@gmail.com', 
             subject: "New message from Portfolio Website",
             text: req.body.message,
             html: htmlEmail
         }
 
-        transporter.sendMail(mailOptions, function(err, res) {
+        transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
-              console.error('there was an error: ', err);
-            } else {
-              console.log('here is the res: ', res)
+                return console.log(err)
+            }
+
+            else {
+                console.log('Message sent: %s', info.message)
             }
         })
-
     })
 })
 
