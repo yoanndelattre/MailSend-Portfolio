@@ -40,9 +40,7 @@ app.post('/api/form', (req, res) => {
                 return console.log(err)
             }
 
-            else {
-                console.log('Message sent: %s', info.message)
-            }
+            console.log('Message sent: %s', info.message)
         })
     })
 })
