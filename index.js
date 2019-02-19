@@ -40,7 +40,7 @@ app.post('/api/form', (req, res) => {
                 return console.log(err)
             }
 
-            console.log('Success')
+            console.log('Success mail send')
         })
     })
 })
