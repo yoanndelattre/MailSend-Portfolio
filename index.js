@@ -29,10 +29,10 @@ app.post('/api/form', (req, res) => {
 
         let mailOptions = {
             from: 'notify@portfolio.com',
-            to: 'contact@yoanndelattre.com,yoanndelattre.bsmhxq@zapiermail.com', 
+            to: 'contact@yoanndelattre.com,yoanndelattre.bsmhxq@zapiermail.com',
+            replyTo: `${req.body.email}`,
+            sender: `${req.body.name}`, 
             subject: "New message from Portfolio Website",
-            sender: `${req.body.email}`,
-            replyTo: `${req.body.name}`,
             text: req.body.message,
             html: htmlEmail,
         }
