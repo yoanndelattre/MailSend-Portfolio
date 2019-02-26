@@ -31,18 +31,10 @@ app.post('/api/form', (req, res) => {
             from: 'notify@portfolio.com',
             to: 'contact@yoanndelattre.com,yoanndelattre.bsmhxq@zapiermail.com', 
             subject: "New message from Portfolio Website",
+            sender: `${req.body.email}`,
+            replyTo: `${req.body.name}`,
             text: req.body.message,
             html: htmlEmail,
-            attachments: [
-                {
-                    filename: 'NameContact.txt',
-                    content: `${req.body.name}`
-                },
-                {
-                    filename: 'EmailContact.txt',
-                    content: `${req.body.email}`
-                }
-            ]
         }
 
         transporter.sendMail(mailOptions, (err, info) => {
