@@ -1,4 +1,4 @@
-runtime: nodejs
+runtime: nodejs11
 
 automatic_scaling:
   max_instances: 3
