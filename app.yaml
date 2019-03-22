@@ -1,8 +1,9 @@
 runtime: nodejs
 
 handlers:
-- url: /
+- url: /.*
   secure: always
+  redirect_http_response_code: 301
 
 automatic_scaling:
   max_instances: 3
