@@ -1,0 +1,9 @@
+runtime: nodejs
+
+handlers:
+- url: /
+  secure: always
+
+automatic_scaling:
+  max_instances: 3
+  
