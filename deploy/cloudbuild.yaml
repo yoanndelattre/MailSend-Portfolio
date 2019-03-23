@@ -1,4 +1,5 @@
 steps:
-- name: 'debian'
-  entrypoint: bash
-  args: ['/bash -c pwd']
+- name: 'gcr.io/cloud-builders/curl'
+  entrypoint: 'bash'
+  args:
+  - '-c', 'ls'
