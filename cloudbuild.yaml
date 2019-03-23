@@ -1,5 +1,5 @@
 steps:
 - name: 'ubuntu'
-  args: ['bash', 'ls']
+  args: ['bash ls']
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone https://source.developers.google.com/p/portfolio-perso-web/r/Prod-Portfolio']
