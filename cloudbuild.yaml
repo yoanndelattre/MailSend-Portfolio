@@ -1,3 +1,3 @@
 steps:
-- name: 'ubuntu'
-  args: ['ls -a']
+- name: 'debian'
+  args: ['/bin/bash ls -a']
