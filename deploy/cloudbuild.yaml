@@ -16,7 +16,7 @@ steps:
 
 - name: 'gcr.io/cloud-builders/git'
   entrypoint: 'bash'
-  args: ['-c', 'cd ./Prod-Portfolio/App/MailSend/', '&&' '-c' 'ls -a']
+  args: ['-c', 'cd ./Prod-Portfolio/App/MailSend/', '&&', '-c', 'ls -a']
 
 - name: 'debian'
   entrypoint: 'bash'
