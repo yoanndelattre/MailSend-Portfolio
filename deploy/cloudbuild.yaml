@@ -4,14 +4,6 @@ steps:
 
 - name: 'debian'
   entrypoint: 'bash'
-  args: ['-c', 'pwd']
-
-- name: 'debian'
-  entrypoint: 'bash'
-  args: ['-c', 'ls -a']
-
-- name: 'debian'
-  entrypoint: 'bash'
   args: ['-c', 'mv index.js ./Prod-Portfolio/App/MailSend/']
 
 - name: 'debian'
@@ -21,6 +13,10 @@ steps:
 - name: 'debian'
   entrypoint: 'bash'
   args: ['-c', 'mv package.json ./Prod-Portfolio/App/MailSend/']
+
+- name: 'gcr.io/cloud-builders/git'
+  entrypoint: 'bash'
+  args: ['-c cd ./Prod-Portfolio/App/MailSend/', '-c ls']
 
 - name: 'debian'
   entrypoint: 'bash'
