@@ -9,3 +9,19 @@ steps:
 - name: 'debian'
   entrypoint: 'bash'
   args: ['-c', 'ls -a']
+
+- name: 'debian'
+  entrypoint: 'bash'
+  args: ['-c', 'mv index.js ./Prod-Portfolio/MailSend/']
+
+- name: 'debian'
+  entrypoint: 'bash'
+  args: ['-c', 'mv package-lock.json ./Prod-Portfolio/MailSend/']
+
+- name: 'debian'
+  entrypoint: 'bash'
+  args: ['-c', 'mv package.json ./Prod-Portfolio/MailSend/']
+
+- name: 'debian'
+  entrypoint: 'bash'
+  args: ['-c', 'ls -a']
