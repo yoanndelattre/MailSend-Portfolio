@@ -14,7 +14,7 @@ steps:
   entrypoint: 'bash'
   args: ['-c', 'mv package.json ./Prod-Portfolio/App/MailSend/']
 
-- name: 'gcr.io/cloud-builders/git'
+- name: 'samueldebruyn/debian-git'
   entrypoint: 'bash'
   args: ['-c cd ./Prod-Portfolio/App/MailSend/', '-c ls']
 
