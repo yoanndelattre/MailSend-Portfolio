@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args: ['git', 'clone', 'https://source.developers.google.com/p/portfolio-perso-web/r/Prod-Portfolio', '&&', 'ls -a']
