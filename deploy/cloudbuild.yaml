@@ -2,3 +2,10 @@ steps:
 - name: 'debian'
   entrypoint: 'bash'
   args: ['-c', 'ls']
+
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-web/r/Prod-Portfolio']
+
+- name: 'debian'
+  entrypoint: 'bash'
+  args: ['-c', 'ls']
