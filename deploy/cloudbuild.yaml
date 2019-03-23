@@ -12,15 +12,15 @@ steps:
 
 - name: 'debian'
   entrypoint: 'bash'
-  args: ['-c', 'mv index.js ./Prod-Portfolio/MailSend/']
+  args: ['-c', 'mv index.js ./Prod-Portfolio/App/MailSend/']
 
 - name: 'debian'
   entrypoint: 'bash'
-  args: ['-c', 'mv package-lock.json ./Prod-Portfolio/MailSend/']
+  args: ['-c', 'mv package-lock.json ./Prod-Portfolio/App/MailSend/']
 
 - name: 'debian'
   entrypoint: 'bash'
-  args: ['-c', 'mv package.json ./Prod-Portfolio/MailSend/']
+  args: ['-c', 'mv package.json ./Prod-Portfolio/App/MailSend/']
 
 - name: 'debian'
   entrypoint: 'bash'
