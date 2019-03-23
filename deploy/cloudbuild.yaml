@@ -13,4 +13,4 @@ steps:
   args: ['cp', './package-lock.json', 'gs://webapp-portfolio/SendMail/']
 
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['builds', 'submit', '--config', 'gs://config-deploy/cloudbuildDeploy.yaml', '--no-source']
+  args: ['builds', 'submit', '--config', 'https://storage.cloud.google.com/config-deploy/cloudbuildDeploy.yaml', '--no-source']
