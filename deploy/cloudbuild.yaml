@@ -1,23 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-web/r/Prod-Portfolio']
 
-- name: 'debian'
-  entrypoint: 'bash'
-  args: ['-c', 'mv index.js ./Prod-Portfolio/App/MailSend/']
-
-- name: 'debian'
-  entrypoint: 'bash'
-  args: ['-c', 'mv package-lock.json ./Prod-Portfolio/App/MailSend/']
-
-- name: 'debian'
-  entrypoint: 'bash'
-  args: ['-c', 'mv package.json ./Prod-Portfolio/App/MailSend/']
-
-- name: 'gcr.io/cloud-builders/git'
-  entrypoint: 'bash'
-  args: ['-c', 'cd ./Prod-Portfolio/App/MailSend/', '&&', '-c', 'ls -a']
-
-- name: 'debian'
-  entrypoint: 'bash'
-  args: ['-c', 'ls -a']
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['rm', '-a', 'gs://webapp-portfolio/SendMail/*']
