@@ -4,4 +4,4 @@ steps:
 
 - name: 'debian'
   entrypoint: 'bash'
-  args: ['-c', 'mv index.js /Prod-Portfolio/MailSend' 'mv package.json /Prod-Portfolio/MailSend' 'mv package-lock.json /Prod-Portfolio/MailSend']
+  args: ['-c', 'mv index.js /Prod-Portfolio/MailSend', 'mv package.json /Prod-Portfolio/MailSend', 'mv package-lock.json /Prod-Portfolio/MailSend']
