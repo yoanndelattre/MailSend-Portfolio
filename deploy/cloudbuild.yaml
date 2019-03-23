@@ -1,7 +1,7 @@
 steps:
 
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['rm', '-a', 'gs://webapp-portfolio/SendMail/*']
+  args: ['rm', '-a', 'gs://webapp-portfolio/SendMail/.']
 
 - name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', './index.js', 'gs://webapp-portfolio/SendMail/']
