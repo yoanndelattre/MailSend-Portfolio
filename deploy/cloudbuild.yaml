@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/curl'
   entrypoint: 'bash'
-  args: ['-c', 'ls']
+  args: ['-c ls']
