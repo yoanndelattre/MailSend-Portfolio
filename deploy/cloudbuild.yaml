@@ -5,3 +5,7 @@ steps:
 - name: 'debian'
   entrypoint: 'bash'
   args: ['-c', 'pwd']
+
+- name: 'debian'
+  entrypoint: 'bash'
+  args: ['-c', 'ls -a']
