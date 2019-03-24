@@ -15,11 +15,3 @@ steps:
 - id: "Add package-lock.json file in bucket"
   name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', './package-lock.json', 'gs://mail_send-portfolio/']
-  
-- id: "Download script deploy App Engine"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', 'gs://config-app_engine-portfolio/cloudbuildDeploy.yaml', '.']
-  
-- id: "Deploy on App Engine"
-  name: 'gcr.io/cloud-builders/gcloud'
-  args: ['builds', 'submit', '--config', './cloudbuildDeploy.yaml', '--no-source']
