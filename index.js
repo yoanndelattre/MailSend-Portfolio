@@ -17,16 +17,10 @@ app.post('/mail/send', function (req, res, next) {
     let mailOpts, smtpTrans;
     
     smtpTrans = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
+      service: 'gmail',
       auth: {
           user: 'portfolio.yoanndelattre@gmail.com',
           pass: 'f3Nk50n8f8qF',
-      },
-      ignoreTLS: true,
-      tls: {
-        rejectUnauthorized: false
       },
     });
 
