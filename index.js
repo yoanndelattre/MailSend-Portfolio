@@ -20,6 +20,9 @@ app.post('/mail/send', function (req, res, next) {
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
+        tls:{
+          rejectUnauthorized:false
+        },
         auth: {
             user: 'portfolio.yoanndelattre@gmail.com',
             pass: 'f3Nk50n8f8qF',
