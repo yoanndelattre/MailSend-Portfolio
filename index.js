@@ -18,14 +18,15 @@ app.post('/mail/send', function (req, res, next) {
     
     smtpTrans = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        tls:{
-          rejectUnauthorized:false
-        },
+        port: 587,
+        secure: false,
         auth: {
-            user: 'portfolio.yoanndelattre@gmail.com',
-            pass: 'f3Nk50n8f8qF',
+          user: 'portfolio.yoanndelattre@gmail.com',
+          pass: 'f3Nk50n8f8qF',
+        },
+        ignoreTLS: true,
+        tls: {
+          rejectUnauthorized: false
         }
     });
 
