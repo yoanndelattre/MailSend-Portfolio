@@ -16,9 +16,19 @@ app.post('/mail/send', function (req, res, next) {
     
     let mailOpts, smtpTrans;
     
-    smtpTrans = nodemailer.createTransport(
-      'smtps://portfolio.yoanndelattre@gmail.com:f3Nk50n8f8qF@smtp.gmail.com'
-    );
+    smtpTrans = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+          user: 'portfolio.yoanndelattre@gmail.com',
+          pass: 'f3Nk50n8f8qF',
+      },
+      ignoreTLS: true,
+      tls: {
+        rejectUnauthorized: false
+      },
+    });
 
     const htmlEmail = `
         <h3>Contact: </h3>
