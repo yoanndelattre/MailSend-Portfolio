@@ -13,7 +13,7 @@ app.use(function(req, res, next) {
     next();
 })
 
-app.post('/mail/api/form', (req, res) => {
+app.post('/api/form', (req, res) => {
     nodemailer.createTestAccount((err, account) => {
         const htmlEmail = `
             <h3>Contact: </h3>
