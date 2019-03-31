@@ -17,9 +17,7 @@ app.post('/mail/send', function (req, res, next) {
     let mailOpts, smtpTrans;
     
     smtpTrans = nodemailer.createTransport({
-      host: 'imap.gmail.com',
-      port: 993,
-      secure: true,
+      service: 'gmail',
       auth: {
           user: 'portfolio.yoanndelattre@gmail.com',
           pass: 'f3Nk50n8f8qF',
