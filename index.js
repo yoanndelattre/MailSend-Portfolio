@@ -32,7 +32,7 @@ app.post('/mail/send', (req, res) => {
             secure: true,
             auth: {
                 user: 'portfolio.yoanndelattre@gmail.com',
-                pass: 'f3Nk50n8f8qF'
+                pass: 'niEHo&QJIqj5%ZA2RDaVSr7JjCZ'
             }
         })
 
