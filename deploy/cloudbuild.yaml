@@ -1,20 +1,4 @@
 steps:
-
-- id: "Remove all objects in bucket"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['-m', 'rm', 'gs://mail_send-portfolio/**']
-  
-- id: "Add index.js file in bucket"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', './index.js', 'gs://mail_send-portfolio/']
-  
-- id: "Add package.json file in bucket"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', './package.json', 'gs://mail_send-portfolio/']
-  
-- id: "Add package-lock.json file in bucket"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', './package-lock.json', 'gs://mail_send-portfolio/']
   
 - id: "Download git repo for config App Engine"
   name: 'gcr.io/cloud-builders/git'
