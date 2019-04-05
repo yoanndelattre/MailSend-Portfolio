@@ -31,8 +31,8 @@ app.post('/mail/send', (req, res) => {
             port: 465,
             secure: true,
             auth: {
-                user: 'portfolio.yoanndelattre@gmail.com',
-                pass: 'niEHo&QJIqj5%ZA2RDaVSr7JjCZ'
+                user: process.env.GMAIL_USER ,
+                pass: process.env.GMAIL_PASS
             }
         })
 
