@@ -1,9 +1,9 @@
 steps:
   
-- id: "Download git repo for config App Engine"
-  name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://source.developers.google.com/p/portfolio-perso-07/r/Config-App-Engine-Portfolio']
-  
-- id: "DEPLOY ON APP ENGINE"
-  name: 'gcr.io/cloud-builders/gcloud'
-  args: ['builds', 'submit', '--config', './Config-App-Engine-Portfolio/master/cloudbuildDeploy.yaml', './Config-App-Engine-Portfolio/']
+- id: "Build app image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['-t', 'gcr.io/portfolio-perso-07/mail-send:latest', '.']
+
+- id: "Build app image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/portfolio-perso-07/mail-send:latest']
