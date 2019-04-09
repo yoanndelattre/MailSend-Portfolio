@@ -2,7 +2,7 @@ steps:
   
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['-t', 'gcr.io/portfolio-perso-07/mail-send:latest', '.']
+  args: ['build', '-t', 'gcr.io/portfolio-perso-07/mail-send:latest', '.']
 
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
