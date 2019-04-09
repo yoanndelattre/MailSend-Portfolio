@@ -2,12 +2,14 @@ steps:
   
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/portfolio-perso-07/mail-send@sha256:001', '.']
+  args: ['build', '-t', 'gcr.io/portfolio-perso-07/mail-send:latest', '.']
+
+
 
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/portfolio-perso-07/mail-send@sha256:001']
+  args: ['push', 'gcr.io/portfolio-perso-07/mail-send:latest']
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-07/mail-send@sha256:001', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40']
+  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-07/mail-send:latest', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40']
