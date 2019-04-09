@@ -11,3 +11,7 @@ steps:
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/portfolio-perso-07/mail-send:latest']
+
+- id: "Deploy new app image"
+  name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-07/mail-send:latest', '--region', 'us-central1']
