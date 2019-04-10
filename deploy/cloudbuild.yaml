@@ -14,4 +14,4 @@ steps:
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-07/mail-send:latest', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40', '--set-env-vars= GMAIL_USER=portfolio.yoanndelattre@gmail.com , GMAIL_PASS=niEHo&QJIqj5%ZA2RDaVSr7JjCZ ']
+  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-07/mail-send:latest', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40', '--set-env-vars= GMAIL_USER=portfolio.yoanndelattre@gmail.com , GMAIL_PASS=CnBeCR6rw8wR ']
