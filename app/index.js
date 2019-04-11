@@ -55,6 +55,10 @@ app.post('/mail/send', (req, res) => {
     })
 })
 
+app.get('/robots.txt', function(req, res) {
+    res.sendFile(__dirname + '/robots.txt');
+})
+
 const port = process.env.PORT || 8080
 
 app.listen(port, () => {
