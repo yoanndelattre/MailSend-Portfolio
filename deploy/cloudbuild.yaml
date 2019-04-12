@@ -2,16 +2,16 @@ steps:
   
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/portfolio-perso-07/mail-send:latest', '.']
+  args: ['build', '-t', 'gcr.io/portfolio-perso-237410/mail-send:latest', '.']
 
 - id: "Remove old app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['container', 'images', 'delete', 'gcr.io/portfolio-perso-07/mail-send:latest']
+  args: ['container', 'images', 'delete', 'gcr.io/portfolio-perso-237410/mail-send:latest']
 
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/portfolio-perso-07/mail-send:latest']
+  args: ['push', 'gcr.io/portfolio-perso-237410/mail-send:latest']
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-07/mail-send:latest', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40']
+  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-237410/mail-send:latest', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40']
