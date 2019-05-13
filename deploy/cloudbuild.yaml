@@ -4,10 +4,6 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/portfolio-perso-237410/mail-send:latest', '.']
 
-- id: "Remove old app image"
-  name: 'gcr.io/cloud-builders/gcloud'
-  args: ['container', 'images', 'delete', 'gcr.io/portfolio-perso-237410/mail-send:latest']
-
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/portfolio-perso-237410/mail-send:latest']
