@@ -20,6 +20,7 @@ app.post('/mail/send', (req, res) => {
             <ul>
                 <li>Name: ${req.body.name}</li>
                 <li>Email: ${req.body.email}</li>
+                <li>Language: ${req.body.languageUser}</li>
             </ul>
             <br></br>
             <h3>Message: </h3>
