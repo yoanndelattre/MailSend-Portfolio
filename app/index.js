@@ -74,10 +74,6 @@ app.post('/mail/send', (req, res) => {
                 console.log('Success mail send US')
             })
         }
-
-        else {
-            console.log('Fail to send mail, language not set')
-        }
     })
 })
 
