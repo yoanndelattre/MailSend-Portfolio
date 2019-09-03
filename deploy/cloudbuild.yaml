@@ -10,4 +10,4 @@ steps:
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-237410/mail-send:latest', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40']
+  args: ['beta', 'run', 'deploy', 'mail-send', '--image', 'gcr.io/portfolio-perso-237410/mail-send:latest', '--region', 'us-central1', '--allow-unauthenticated', '--concurrency', '40', '--platform', 'managed']
