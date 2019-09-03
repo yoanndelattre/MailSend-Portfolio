@@ -77,6 +77,12 @@ app.post('/mail/send', (req, res) => {
     })
 })
 
+app.get("/", (req, res) => {
+
+    res.status(301).redirect("https://yoanndelattre.com")
+
+})
+
 app.get('/robots.txt', function(req, res) {
     res.sendFile(__dirname + '/robots.txt');
 })
