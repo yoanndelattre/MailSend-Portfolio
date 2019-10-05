@@ -60,7 +60,6 @@ app.post('/mail/send', (req, res) => {
                 if (err) {
                     return console.log(err)
                 }
-    
                 console.log('Success mail send FR')
             })
         }
@@ -70,7 +69,6 @@ app.post('/mail/send', (req, res) => {
                 if (err) {
                     return console.log(err)
                 }
-    
                 console.log('Success mail send US')
             })
         }
