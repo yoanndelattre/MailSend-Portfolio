@@ -20,6 +20,7 @@ app.post('/mail/send', (req, res) => {
             <ul>
                 <li>Name: ${req.body.name}</li>
                 <li>Email: ${req.body.email}</li>
+                <li>Language: ${req.body.languageUser}</li>
             </ul>
             <br></br>
             <h3>Message: </h3>
@@ -36,7 +37,7 @@ app.post('/mail/send', (req, res) => {
             }
         })
 
-        let mailOptions = {
+        let mailOptionsFr = {
             from: 'notify@portfolio.com',
             to: 'contact@yoanndelattre.com,yoanndelattre.bsmhxq@zapiermail.com',
             replyTo: `${req.body.email}`,
@@ -45,14 +46,37 @@ app.post('/mail/send', (req, res) => {
             html: htmlEmail,
         }
 
-        transporter.sendMail(mailOptions, (err, info) => {
-            if (err) {
-                return console.log(err)
-            }
+        let mailOptionsUS = {
+            from: 'notify@portfolio.com',
+            to: 'contact@yoanndelattre.com,englishyoanndelattre.bsmhxq@zapiermail.com',
+            replyTo: `${req.body.email}`,
+            subject: "New message from Portfolio Website",
+            text: req.body.message,
+            html: htmlEmail,
+        }
 
-            console.log('Success mail send')
-        })
+        if (req.body.languageUser === 'FR') {
+            transporter.sendMail(mailOptionsFr, (err, info) => {
+                if (err) {
+                    return console.log(err)
+                }
+                console.log('Success mail send FR')
+            })
+        }
+
+        if (req.body.languageUser === 'US') {
+            transporter.sendMail(mailOptionsUS, (err, info) => {
+                if (err) {
+                    return console.log(err)
+                }
+                console.log('Success mail send US')
+            })
+        }
     })
+})
+
+app.get("/", (req, res) => {
+    res.status(301).redirect("https://yoanndelattre.com")
 })
 
 app.get('/robots.txt', function(req, res) {
@@ -60,7 +84,6 @@ app.get('/robots.txt', function(req, res) {
 })
 
 const port = process.env.PORT || 8080
-
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`)
 })
