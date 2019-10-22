@@ -2,16 +2,16 @@ steps:
 
 - id: "Pull app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['pull', 'gcr.io/portfolio-perso-237410/mail-send:latest']
+  args: ['pull', 'gcr.io/portfolio-project-07/mail-send:latest']
 
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/portfolio-perso-237410/mail-send:latest', '.']
+  args: ['build', '-t', 'gcr.io/portfolio-project-07/mail-send:latest', '.']
 
 - id: "Push app image"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/portfolio-perso-237410/mail-send:latest']
+  args: ['push', 'gcr.io/portfolio-project-07/mail-send:latest']
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'mail-send', '--image=gcr.io/portfolio-perso-237410/mail-send:latest', '--region=us-central1', '--allow-unauthenticated', '--concurrency=40', '--platform=managed', '--timeout=30s']
+  args: ['beta', 'run', 'deploy', 'mail-send', '--image=gcr.io/portfolio-project-07/mail-send:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=50', '--platform=managed', '--timeout=30s', "--max-instances=4", "--memory=128Mio"]
