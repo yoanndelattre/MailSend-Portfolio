@@ -73,6 +73,7 @@ app.post('/mail/send', (req, res) => {
             })
         }
     })
+    res.send('success_mail_send')
 })
 
 app.get("/", (req, res) => {
