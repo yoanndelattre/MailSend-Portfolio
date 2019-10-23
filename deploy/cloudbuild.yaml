@@ -14,4 +14,4 @@ steps:
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'mail-send', '--image=gcr.io/portfolio-project-07/mail-send:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=50', '--platform=managed', '--timeout=30s', "--max-instances=4", "--memory=128Mi"]
+  args: ['beta', 'run', 'deploy', 'mail-send', '--image=gcr.io/portfolio-project-07/mail-send:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=50', '--platform=managed', '--timeout=30s', '--max-instances=4', '--memory=128Mi']
