@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const MailAdmin = require('./assets/MailAdmin/MailAdmin')
+const MailClientFR = require('./assets/MailClient/MailClientFR')
+const MailCLientUS = require('./assets/MailClient/MailClientUS')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -14,6 +16,18 @@ app.use(function(req, res, next) {
 })
 
 app.post('/mail/send', (req, res) => {
+    if (req.body.languageUser === 'FR') {
+        MailClientFR.SendMailClientFR(req, res)
+    }
+
+    if (req.body.languageUser === 'US') {
+        MailCLientUS.SendMailClientUS(req, res)
+    }
+
+    else {
+        console.log('Error Language Send mail to client')
+    }
+
     MailAdmin.SendMailAdmin(req, res)
 })
 
