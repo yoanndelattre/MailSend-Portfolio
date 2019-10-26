@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 })
 
 app.get('/robots.txt', function(req, res) {
-    res.sendFile(__dirname + '/robots.txt');
+    res.sendFile(__dirname + '/assets/robots.txt');
 })
 
 const port = process.env.PORT || 8080
