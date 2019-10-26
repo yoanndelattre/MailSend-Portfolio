@@ -24,10 +24,6 @@ app.post('/mail/send', (req, res) => {
         MailCLientUS.SendMailClientUS(req, res)
     }
 
-    else {
-        console.log('Error Language Send mail to client')
-    }
-
     MailAdmin.SendMailAdmin(req, res)
 })
 
