@@ -27,7 +27,6 @@ module.exports.SendMailAdmin = function (req, res) {
         let mailOptionsAdmin = {
             from: 'notify@portfolio.com',
             to: 'contact@yoanndelattre.com',
-            replyTo: `${req.body.email}`,
             subject: "New message from Portfolio Website",
             text: req.body.message,
             html: htmlEmailAdmin,
@@ -37,7 +36,9 @@ module.exports.SendMailAdmin = function (req, res) {
             if (err) {
                 return console.log(err)
             }
-            console.log('Success mail send Admin')
+            else {
+                console.log('Success mail send Admin')
+            }
         })
     })
 };
