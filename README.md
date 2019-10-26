@@ -49,7 +49,7 @@
 
 * ```docs``` : Modification of the documentation (for example modification of the file *README<i></i>.md*) .
 
-* ```feat``` : Adding a new feature (usually in the ```feature``` branch) .
+* ```feat``` : Adding a new feature .
 
 * ```fix``` : Bug fix .
 
