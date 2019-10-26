@@ -32,10 +32,12 @@ app.get("/", (req, res) => {
 })
 
 app.get('/robots.txt', function(req, res) {
-    res.sendFile(__dirname + '/robots.txt');
+    res.sendFile(__dirname + '/assets/robots.txt');
 })
 
 const port = process.env.PORT || 8080
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
-})
+const server = app.listen(port, function () {
+    console.log(`Server listening on port ${port}`);
+});
+
+module.exports = server;

@@ -55,6 +55,8 @@
 
 * ```simplification``` : Simplification of a method or code in general .
 
+* ```test``` : Change test strategy .
+
 * ```refactor``` : Change of the code which does not change the functioning (for example delete of spaces) .
 
 * ```issue``` : Github issue.
