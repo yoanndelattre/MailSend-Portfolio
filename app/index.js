@@ -36,6 +36,8 @@ app.get('/robots.txt', function(req, res) {
 })
 
 const port = process.env.PORT || 8080
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
-})
+const server = app.listen(port, function () {
+    console.log(`Server listening on port ${port}`);
+});
+
+module.exports = server;
