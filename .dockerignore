@@ -1,2 +1,10 @@
 node_modules
 client
+.git
+.circleci
+deploy
+test
+.dockerignore
+.gitignore
+Dockerfile
+README.md
