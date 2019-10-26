@@ -1,4 +1,9 @@
 # MailSend
+&nbsp;
+
+## Continuous Integration Status Badge with CircleCi on ```master``` branch :
+
+[![CircleCI](https://circleci.com/gh/yoanndelattre/MailSend-Portfolio.svg?style=svg)](https://circleci.com/gh/yoanndelattre/MailSend-Portfolio)
 
 &nbsp;  
 &nbsp;
