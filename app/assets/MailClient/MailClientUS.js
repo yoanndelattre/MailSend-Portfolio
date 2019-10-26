@@ -28,6 +28,7 @@ module.exports.SendMailAdmin = function (req, res) {
             from: 'notify@portfolio.com',
             to: 'contact@yoanndelattre.com',
             subject: "New message from Portfolio Website",
+            text: req.body.message,
             html: htmlEmailAdmin,
         }
 
