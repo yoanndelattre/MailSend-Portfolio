@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const nodemailer = require('nodemailer')
 const app = express()
+const MailAdmin = require('./assets/MailAdmin/MailAdmin')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -14,65 +14,7 @@ app.use(function(req, res, next) {
 })
 
 app.post('/mail/send', (req, res) => {
-    nodemailer.createTestAccount((err, account) => {
-        const htmlEmail = `
-            <h3>Contact: </h3>
-            <ul>
-                <li>Name: ${req.body.name}</li>
-                <li>Email: ${req.body.email}</li>
-                <li>Language: ${req.body.languageUser}</li>
-            </ul>
-            <br></br>
-            <h3>Message: </h3>
-            <p>${req.body.message}</p>
-        `
-
-        let transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 465,
-            secure: true,
-            auth: {
-                user: process.env.GMAIL_USER,
-                pass: process.env.GMAIL_PASS
-            }
-        })
-
-        let mailOptionsFr = {
-            from: 'notify@portfolio.com',
-            to: 'contact@yoanndelattre.com,yoanndelattre.bsmhxq@zapiermail.com',
-            replyTo: `${req.body.email}`,
-            subject: "New message from Portfolio Website",
-            text: req.body.message,
-            html: htmlEmail,
-        }
-
-        let mailOptionsUS = {
-            from: 'notify@portfolio.com',
-            to: 'contact@yoanndelattre.com,englishyoanndelattre.bsmhxq@zapiermail.com',
-            replyTo: `${req.body.email}`,
-            subject: "New message from Portfolio Website",
-            text: req.body.message,
-            html: htmlEmail,
-        }
-
-        if (req.body.languageUser === 'FR') {
-            transporter.sendMail(mailOptionsFr, (err, info) => {
-                if (err) {
-                    return console.log(err)
-                }
-                console.log('Success mail send FR')
-            })
-        }
-
-        if (req.body.languageUser === 'US') {
-            transporter.sendMail(mailOptionsUS, (err, info) => {
-                if (err) {
-                    return console.log(err)
-                }
-                console.log('Success mail send US')
-            })
-        }
-    })
+    MailAdmin.SendMailAdmin(req, res)
 })
 
 app.get("/", (req, res) => {
