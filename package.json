@@ -7,6 +7,10 @@
     "start": "node index.js",
     "test": "mocha test/test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoanndelattre/MailSend-Portfolio.git"
+  },
   "keywords": [],
   "author": "Yoann Delattre",
   "license": "ISC",
