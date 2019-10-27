@@ -1,6 +1,7 @@
 {
   "name": "mailsend-portfolio",
   "version": "1.0.0",
+  "description": "Backend service for sending mail related to the Portfolio website",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
