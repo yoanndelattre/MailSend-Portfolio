@@ -20,7 +20,7 @@
     "nodemailer": "^6.4.2"
   },
   "devDependencies": {
-    "mocha": "^6.2.2",
+    "mocha": "^7.0.0",
     "supertest": "^4.0.2"
   }
 }
