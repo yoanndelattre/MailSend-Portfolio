@@ -17,7 +17,7 @@
 *```"type"/"target"```*
 
 ### Example :
-```feature/ClientMail```
+```feat/ClientMail```
 
 &nbsp;
 
@@ -25,12 +25,14 @@
 
 * *```dev```* : For the general development of the application (this branch will be created to gather all the changes of the "feature" branch).
 
-* *```feature```* : For the development of a new feature.
+* *```feat```* : For the development of a new feature.
+
+* *```fix```* : For fix a bug or problem.
 
 
 #### For ```"target"``` :
 
-* Name of the new feature or bug name resolved (```feature/InfoMail```).
+* Name of the new feature or bug name resolved (```feat/InfoMail```).
 
 &nbsp;
 &nbsp;
