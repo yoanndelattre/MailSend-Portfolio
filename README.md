@@ -17,7 +17,7 @@
 *```"type"/"target"```*
 
 ### Example :
-```feature/ClientMail```
+```feat/ClientMail```
 
 &nbsp;
 
@@ -25,12 +25,14 @@
 
 * *```dev```* : For the general development of the application (this branch will be created to gather all the changes of the "feature" branch).
 
-* *```feature```* : For the development of a new feature.
+* *```feat```* : For the development of a new feature.
+
+* *```fix```* : For fix a bug or problem.
 
 
 #### For ```"target"``` :
 
-* Name of the new feature or bug name resolved (```feature/InfoMail```).
+* Name of the new feature or bug name resolved (```feat/InfoMail```).
 
 &nbsp;
 &nbsp;
@@ -41,11 +43,11 @@
 &nbsp;
 
 ### Structure :
-*```"type"("scope"):"subject"```*  
+*```"type":"subject"```*  
 *```("issues")```*
 
 ### Example :
-```feat(InfoMail):add info in client mail```  
+```feat:add info in client mail```  
 ```Fixes #45```
 
 &nbsp;
@@ -65,25 +67,6 @@
 * ```refactor``` : Change of the code which does not change the functioning (for example delete of spaces) .
 
 * ```issue``` : Github issue.
-
-
-#### For ```"scope"``` (optional) :
-
-* ```MailAdmin```
-
-* ```MailClientFR```
-
-* ```MailClientUS```
-
-* ```GCP``` *(Strategy of deployment on Google Gloud Platfrom with Cloud Run) .*
-
-* ```Docker``` *(Docker environment) .*
-
-* ```Config``` : *(Modification of the config files) .*
-
-* ```Github``` : *(Modification of configuration files for the Github repository) .*
-
-* ```SEO``` : *(SEO improvement) .*
 
 
 #### For ```"subject"``` :

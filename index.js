@@ -25,6 +25,8 @@ app.post('/mail/send', (req, res) => {
     }
 
     MailAdmin.SendMailAdmin(req, res)
+
+    res.sendStatus(200)
 })
 
 app.get("/", (req, res) => {
