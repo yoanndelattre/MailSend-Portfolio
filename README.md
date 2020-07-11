@@ -47,7 +47,7 @@
 *```("issues")```*
 
 ### Example :
-```feat:add info in client mail```  
+```MailClientFR:add info in client mail```  
 ```Fixes #45```
 
 &nbsp;
