@@ -10,6 +10,6 @@ steps:
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'mail-send-portfolio', '--image=gcr.io/portfolio-287719/mail-send-portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=50', '--platform=managed', '--timeout=30s', '--max-instances=6', '--memory=128Mi']
+  args: ['run', 'deploy', 'mail-send-portfolio', '--image=gcr.io/portfolio-287719/mail-send-portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=30s', '--max-instances=6', '--memory=128Mi']
 
 timeout: 120s
