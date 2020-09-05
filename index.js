@@ -29,7 +29,6 @@ app.post('/mail/send', (req, res) => {
   }
 
   if (req.body.test === 'supertest_test') {
-    res.send('success');
     res.sendStatus(200);
   }
 });
