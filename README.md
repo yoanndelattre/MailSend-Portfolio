@@ -66,6 +66,8 @@
 
 * ```Config``` : *(Modification of the config files) .*  
 
+* ```ESlint``` : *(ESlint syntax error) .*  
+
 * ```Github``` : *(Modification of configuration files for the Github repository) .*  
 
 * ```SEO``` : *(SEO improvement) .*  
