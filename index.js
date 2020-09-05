@@ -17,14 +17,14 @@ app.use(function(req, res, next) {
 
 app.post('/mail/send', (req, res) => {
   if (req.body.languageUser === 'FR') {
-    MailClientFR.SendMailClientFR(req, res);
+    MailClientFR.sendMailClientFR(req, res);
   }
 
   if (req.body.languageUser === 'US') {
-    MailCLientUS.SendMailClientUS(req, res);
+    MailCLientUS.sendMailClientUS(req, res);
   }
 
-  MailAdmin.SendMailAdmin(req, res);
+  MailAdmin.sendMailAdmin(req, res);
 
   res.sendStatus(200);
 });

@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-module.exports.SendMailAdmin = function(req, res) {
+module.exports.sendMailAdmin = function(req, res) {
   nodemailer.createTestAccount((err, account) => {
     const htmlEmailAdmin = `
             <h3>Contact: </h3>
