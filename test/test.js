@@ -14,6 +14,11 @@ describe('--Test MailSend App-- \n', function() {
         .expect('Content-Type', 'text/plain; charset=utf-8')
         .expect(200, done);
   });
+  it('GET /mail/send', function(done) {
+    request(server)
+        .get('/mail/send')
+        .expect(404, done);
+  });
   it('GET /', function(done) {
     request(server)
         .get('/')
@@ -23,10 +28,5 @@ describe('--Test MailSend App-- \n', function() {
     request(server)
         .get('/robots.txt')
         .expect(200, done);
-  });
-  it('GET /mail/send', function(done) {
-    request(server)
-        .get('/mail/send')
-        .expect(404, done);
   });
 });
