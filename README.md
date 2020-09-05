@@ -66,6 +66,12 @@
 
 * ```Config``` : *(Modification of the config files) .*  
 
+* ```Package``` : *(Add or remove package/dependencie) .*
+
+* ```Test``` : *(Change test strategy with mocha) .*
+
+* ```ESlint``` : *(ESlint syntax error) .*  
+
 * ```Github``` : *(Modification of configuration files for the Github repository) .*  
 
 * ```SEO``` : *(SEO improvement) .*  
