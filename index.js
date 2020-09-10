@@ -6,7 +6,7 @@ const MailClientFR = require('./assets/MailClient/MailClientFR');
 const MailCLientUS = require('./assets/MailClient/MailClientUS');
 
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://yoanndelattre.com');
   res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
