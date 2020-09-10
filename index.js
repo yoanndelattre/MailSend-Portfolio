@@ -1,19 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const cors = require('cors');
 const MailAdmin = require('./assets/MailAdmin/MailAdmin');
 const MailClientFR = require('./assets/MailClient/MailClientFR');
 const MailCLientUS = require('./assets/MailClient/MailClientUS');
 
-const allowCrossDomain = function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://yoanndelattre.com');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  next();
+const corsOptions = {
+  origin: 'https://yoanndelattre.com',
+  methods: 'POST',
+  allowedHeaders: 'X-Requested-With,content-type',
 };
 
-app.use(allowCrossDomain);
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
