@@ -5,16 +5,18 @@ const MailAdmin = require('./assets/MailAdmin/MailAdmin');
 const MailClientFR = require('./assets/MailClient/MailClientFR');
 const MailCLientUS = require('./assets/MailClient/MailClientUS');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-
-app.use(function (req, res, next) {
+const allowCrossDomain = function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'https://yoanndelattre.com');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
-});
+};
+
+app.use(allowCrossDomain);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/mail/send', (req, res) => {
   if (req.body.languageUser === 'FR') {
