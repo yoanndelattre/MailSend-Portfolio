@@ -8,10 +8,11 @@ const MailCLientUS = require('./assets/MailClient/MailClientUS');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'https://yoanndelattre.com');
-  res.header('Access-Control-Allow-Methods', 'POST');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://yoanndelattre.com');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
 
