@@ -8,6 +8,7 @@ const MailCLientUS = require('./assets/MailClient/MailClientUS');
 
 const corsOptions = {
   origin: 'https://yoanndelattre.com',
+  optionsSuccessStatus: 200,
   methods: 'POST',
   allowedHeaders: 'X-Requested-With,content-type',
 };
