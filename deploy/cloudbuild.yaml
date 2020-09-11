@@ -12,4 +12,4 @@ steps:
   name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'deploy', 'mail-send', '--image=gcr.io/$PROJECT_ID/mail-send-portfolio:latest', '--region=europe-west1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=30s', '--max-instances=25', '--memory=128Mi', '--cpu=1']
 
-timeout: 120s
+timeout: 90s
