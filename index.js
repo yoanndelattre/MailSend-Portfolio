@@ -19,18 +19,13 @@ app.post('/mail/send', (req, res) => {
   if (req.body.languageUser === 'FR') {
     MailClientFR.sendMailClientFR(req, res);
     MailAdmin.sendMailAdmin(req, res);
-    res.sendStatus(200);
   }
 
   if (req.body.languageUser === 'US') {
     MailCLientUS.sendMailClientUS(req, res);
     MailAdmin.sendMailAdmin(req, res);
-    res.sendStatus(200);
   }
-
-  if (req.body.test === 'supertest_test') {
-    res.sendStatus(200);
-  }
+  res.sendStatus(200);
 });
 
 app.get('/', (req, res) => {
