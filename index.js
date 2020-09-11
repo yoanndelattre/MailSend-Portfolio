@@ -16,12 +16,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/mail/send', (req, res) => {
-  if (req.body.languageUser === 'FR') {
+  if (req.body.languageUser === 'fr') {
     MailClientFR.sendMailClientFR(req, res);
     MailAdmin.sendMailAdmin(req, res);
   }
 
-  if (req.body.languageUser === 'US') {
+  if (req.body.languageUser === 'en') {
     MailCLientUS.sendMailClientUS(req, res);
     MailAdmin.sendMailAdmin(req, res);
   }
